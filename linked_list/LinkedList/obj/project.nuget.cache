@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eyRJMv3JPVk=",
+  "success": true,
+  "projectFilePath": "/home/borges/development/algorithms/linked_list/LinkedList/LinkedList.csproj",
+  "expectedPackageFiles": [
+    "/home/borges/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.2/microsoft.aspnetcore.app.ref.9.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

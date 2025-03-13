@@ -1,0 +1,15 @@
+/home/borges/development/algorithms/linked_list/LinkedList/bin/Debug/net9.0/LinkedList
+/home/borges/development/algorithms/linked_list/LinkedList/bin/Debug/net9.0/LinkedList.deps.json
+/home/borges/development/algorithms/linked_list/LinkedList/bin/Debug/net9.0/LinkedList.runtimeconfig.json
+/home/borges/development/algorithms/linked_list/LinkedList/bin/Debug/net9.0/LinkedList.dll
+/home/borges/development/algorithms/linked_list/LinkedList/bin/Debug/net9.0/LinkedList.pdb
+/home/borges/development/algorithms/linked_list/LinkedList/obj/Debug/net9.0/LinkedList.GeneratedMSBuildEditorConfig.editorconfig
+/home/borges/development/algorithms/linked_list/LinkedList/obj/Debug/net9.0/LinkedList.AssemblyInfoInputs.cache
+/home/borges/development/algorithms/linked_list/LinkedList/obj/Debug/net9.0/LinkedList.AssemblyInfo.cs
+/home/borges/development/algorithms/linked_list/LinkedList/obj/Debug/net9.0/LinkedList.csproj.CoreCompileInputs.cache
+/home/borges/development/algorithms/linked_list/LinkedList/obj/Debug/net9.0/LinkedList.sourcelink.json
+/home/borges/development/algorithms/linked_list/LinkedList/obj/Debug/net9.0/LinkedList.dll
+/home/borges/development/algorithms/linked_list/LinkedList/obj/Debug/net9.0/refint/LinkedList.dll
+/home/borges/development/algorithms/linked_list/LinkedList/obj/Debug/net9.0/LinkedList.pdb
+/home/borges/development/algorithms/linked_list/LinkedList/obj/Debug/net9.0/LinkedList.genruntimeconfig.cache
+/home/borges/development/algorithms/linked_list/LinkedList/obj/Debug/net9.0/ref/LinkedList.dll
