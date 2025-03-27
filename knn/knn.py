@@ -98,4 +98,4 @@ if __name__ == "__main__":
     
     test_predictions = knn.predict(test_points)
     for point, pred in zip(test_points, test_predictions):
-        print(f"Point {point} classified as Class {pred}")2
+        print(f"Point {point} classified as Class {pred}")
