@@ -27,10 +27,7 @@ class Queue<T> {
 
         let current = this.front;
 
-        while (!current.next) {
-          current = current.next;
         }
-
         current.next = item;
         this.size++;
     }
