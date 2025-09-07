@@ -1,19 +1,13 @@
-export type Node_<T> = {
-  data: NonNullable<T>;
-  next: Node_<T> | null;
-};
+import { _Node } from "./node_";
 
-export class LinkedList<T> {
-  protected head: Node_<T> | null = null;
-  protected size: number = 0;
+export class LinkedList_<T> {
+  private head: _Node<T> | null = null;
+  private size: number = 0;
 
-  /**
-   * Adds a new node with the given data to the end of the list.
-   */
   public add(data: NonNullable<T>): void {
-    const newNode: Node_<T> = { data, next: null };
+    const newNode: _Node<T> = { data, next: null };
     if (!this.head) {
-      this.head = newNode;
+      this.setHead(newNode);
     } else {
       let current = this.head;
       while (current.next) {
@@ -21,27 +15,20 @@ export class LinkedList<T> {
       }
       current.next = newNode;
     }
-    this.size++;
+    this.increaseSize();
   }
 
-  /**
-   * Adds a new node with the given data to the beginning of the list.
-   */
   public addFirst(data: NonNullable<T>): void {
-    const newNode: Node_<T> = { data, next: this.head };
-    this.head = newNode;
-    this.size++;
+    const newNode: _Node<T> = { data, next: this.head };
+    this.setHead(newNode);
+    this.increaseSize();
   }
 
-  /**
-   * Removes the first occurrence of the node with the given data.
-   * Returns true if removed, false otherwise.
-   */
   public remove(data: NonNullable<T>): boolean {
     if (!this.head) return false;
 
     if (this.head.data === data) {
-      this.head = this.head.next;
+      this.setHead(this.head.next);
       this.size--;
       return true;
     }
@@ -58,9 +45,6 @@ export class LinkedList<T> {
     return false;
   }
 
-  /**
-   * Checks if the list contains the given data.
-   */
   public contains(data: NonNullable<T>): boolean {
     let current = this.head;
     while (current) {
@@ -70,18 +54,10 @@ export class LinkedList<T> {
     return false;
   }
 
-  /**
-   * Returns the size of the list.
-   */
   public getSize(): number {
     return this.size;
   }
 
-  /**
-   * Returns the element at the provided zero-based index.
-   * Throws RangeError if the index is out of bounds.
-   * Time complexity: O(n) in the worst case.
-   */
   public get(index: number): NonNullable<T> {
     if (index < 0 || index >= this.size) {
       throw new RangeError(`Index out of bounds: ${index}`);
@@ -92,20 +68,13 @@ export class LinkedList<T> {
       current = current.next;
       i++;
     }
-    // current is guaranteed to be non-null here due to bounds check
     return current!.data;
   }
 
-  /**
-   * Checks if the list is empty.
-   */
   public isEmpty(): boolean {
     return this.size === 0;
   }
 
-  /**
-   * Returns a string representation of the list.
-   */
   public toString(): string {
     let result = "";
     let current = this.head;
@@ -115,5 +84,17 @@ export class LinkedList<T> {
     }
     result += "null";
     return result;
+  }
+  
+  public getHead() {
+    return this.head;
+  }
+  
+  public setHead(node: _Node<T> | null) {
+    this.head = node;
+  }
+  
+  public increaseSize() {
+    this.size++;
   }
 }

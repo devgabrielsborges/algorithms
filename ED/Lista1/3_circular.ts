@@ -1,3 +1,10 @@
+/*
+3. Desenvolva uma função para inserir um nó em uma lista encadeada circular de pessoas,
+garantindo que a ordenação crescente por idade seja mantida. Defina atributos
+adequados para o nó, como nome e idade, e valide se a lista continua circular após a
+inserção.
+*/
+
 class _Node<T extends { idade: number }> {
   data: T;
   next: _Node<T>;
@@ -40,18 +47,3 @@ class CircularSortedList<T extends { idade: number }> {
     current.next = node;
   }
 }
-
-interface Pessoa {
-  nome: string;
-  idade: number;
-}
-
-const list = new CircularSortedList<Pessoa>();
-[
-  { nome: "Joao", idade: 30 },
-  { nome: "Maria", idade: 25 },
-  { nome: "Luis", idade: 40 },
-  { nome: "Ana", idade: 20 },
-  { nome: "Caio", idade: 25 }
-].forEach(p => list.push(new _Node(p)));
-

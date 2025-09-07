@@ -1,3 +1,9 @@
+/*
+1. Modele um TAD para representar livros de uma biblioteca (título, autor, ano, código). Em
+seguida, implemente operações básicas: adicionar livro, buscar por título e remover por
+código.
+*/
+
 type Livro = {
     titulo: string,
     autor: string,

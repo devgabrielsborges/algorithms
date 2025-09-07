@@ -27,7 +27,7 @@ class Queue<T> {
 
         let current = this.front;
 
-        while (!current.next) {
+        while (current.next) {
           current = current.next;
         }
 
