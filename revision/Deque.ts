@@ -29,7 +29,6 @@ class Deque<T> {
         if (this.front) {
             this.front.prev = node;
         } else {
-            // if empty, back also points here
             this.back = node;
         }
 
@@ -107,4 +106,48 @@ class Deque<T> {
     public peekRight(): T | undefined {
         return this.back?.data;
     }
+
+    /**
+     * Clear the deque
+     */
+    public clear(): void {
+        this.front = null;
+        this.back = null;
+        this._size = 0;
+    }
+
+    /**
+     * Convert deque to an array
+     */
+    public toArray(): T[] {
+        const result: T[] = [];
+        let current = this.front;
+
+        while (current) {
+            result.push(current.data);
+            current = current.next;
+        }
+
+        return result;
+    }
+
+    /**
+     * Display the deque (for debugging)
+     */
+    public display(): void {
+        console.log(this.toArray().join(" <-> "));
+    }
 }
+
+// Example usage
+const deque = new Deque<number>();
+deque.enqueueLeft(1);
+deque.enqueueRight(2);
+deque.enqueueLeft(0);
+deque.display(); // Output: 0 <-> 1 <-> 2
+console.log(deque.dequeueRight()); // Output: 2
+deque.display(); // Output: 0 <-> 1
+console.log(deque.peekLeft()); // Output: 0
+console.log(deque.peekRight()); // Output: 1
+deque.clear();
+deque.display(); // Output: (empty)
