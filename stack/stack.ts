@@ -39,7 +39,7 @@ class Stack {
     }
 
     public isEmpty(): boolean {
-        return this.top == null;
+        return this.top === null;
     }
 
     public getSize(): number {
